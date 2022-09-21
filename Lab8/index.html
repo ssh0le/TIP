@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="first">
+        <form action="">
+            <div class="in">
+                <label for="from-date">Первый день</label>
+                <input type="date" id="from-date"></div>
+            <div class="in">
+                <label for="to-date">Последний день</label>
+                <input type="date" id="to-date">
+            </div>
+            <button type="button" onclick="clickHandler()">Расчитать</button>
+            <div class="out">
+                <label for="work">Количество рабочих дней</label>
+                <input id="work" disabled>
+            </div>
+            <div class="out">
+                <label for="week">Количество выходных дней</label>
+                <input id="week" disabled>
+            </div>
+        </form>
+    </div>
+    <div class="second" id="second">
+        <div class="forms">
+            <form action="" class="employee">
+                <fieldset>
+                 <legend>Сотрудник 1</legend>
+                 <div class="surname">
+                     <label for="">Фамилия</label>
+                     <input type="text" name="" id="">
+                 </div>
+                 <div class="date">
+                     <label for="">Дата приема</label>
+                     <input type="date" name="" id="date1">
+                 </div>
+                </fieldset>
+             </form>
+             <form action="" class="employee">
+                <fieldset>
+                 <legend>Сотрудник 2</legend>
+                 <div class="surname">
+                     <label for="">Фамилия</label>
+                     <input type="text" name="" id="">
+                 </div>
+                 <div class="date">
+                     <label for="">Дата приема</label>
+                     <input type="date" name="" id="date2">
+                 </div>
+                </fieldset>
+             </form>
+             <form action="" class="employee">
+                <fieldset>
+                 <legend>Сотрудник 3</legend>
+                 <div class="surname">
+                     <label for="">Фамилия</label>
+                     <input type="text" name="" id="">
+                 </div>
+                 <div class="date">
+                     <label for="">Дата приема</label>
+                     <input type="date" name="" id="date3">
+                 </div>
+                </fieldset>
+             </form>
+             <form action="" class="employee">
+                <fieldset>
+                 <legend>Сотрудник 4</legend>
+                 <div class="surname">
+                     <label for="">Фамилия</label>
+                     <input type="text" name="" id="">
+                 </div>
+                 <div class="date">
+                     <label for="">Дата приема</label>
+                     <input type="date" name="" id="date4">
+                 </div>
+                </fieldset>
+             </form>
+             <form action="" class="employee">
+                <fieldset>
+                 <legend>Сотрудник 5</legend>
+                 <div class="surname">
+                     <label for="">Фамилия</label>
+                     <input type="text" name="" id="">
+                 </div>
+                 <div class="date">
+                     <label for="">Дата приема</label>
+                     <input type="date" name="" id="date5">
+                 </div>
+                </fieldset>
+             </form>
+             <form action="" class="employee">
+                <fieldset>
+                 <legend>Сотрудник 6</legend>
+                 <div class="surname">
+                     <label for="">Фамилия</label>
+                     <input type="text" name="" id="">
+                 </div>
+                 <div class="date">
+                     <label for="">Дата приема</label>
+                     <input type="date" name="" id="date6">
+                 </div>
+                </fieldset>
+             </form>
+             <div class="controls">
+                <button onclick="secondClickHandler()">Расчитать</button>
+             </div>
+        </div>
+    </div>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

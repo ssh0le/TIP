@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function task1() {
+            let answer = prompt("2 + 2 * 2 = ?", '');
+            if (Number.isInteger(+answer)) {
+                if (+answer === 6) {
+                    alert("Вы знаете арифметику");
+                } else {
+                    alert("Вы не знаете арифметику");
+                }
+            } else {
+                alert("Вы не знаете цифры");
+            }
+        }
+
+        function task2() {
+            const output = document.getElementById('output');
+            output.textContent = '';
+            let answer = prompt('Введите число:', '');
+            let empty = true;
+            while(answer) {
+                if (Number.isInteger(+answer)) {
+                    if (+answer % 2 === 0) {
+                        output.textContent += (answer + " ");
+                        empty = false;
+                    }
+                }
+                answer = prompt('Введите число:', '');
+            }
+            if (empty) {
+                output.textContent = 'Четных чисел нет';
+            }
+        }
+    </script>
+    <style>
+        body, .wrapper {
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap:wrap;
+        }
+
+        .wrapper {
+            width: 50vw;
+            height: 40vh;
+            border: 3px solid black;
+            border-radius: 20px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 1.5em;
+            border-radius: 15px;
+        }
+
+        button:hover {
+            transition: 0.5s;
+            background-color: brown;
+            color: white;
+        }
+        #output {
+            width: 100%;
+            box-sizing: border-box;
+            margin: 0 10px;
+            padding: 20px;
+            font-size: 2em;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <button onclick="task1()">Задание 1</button>
+        <button onclick="task2()">Задание 2</button>
+        <div id="output">Вывод</div>
+    </div>
+</body>
+</html>

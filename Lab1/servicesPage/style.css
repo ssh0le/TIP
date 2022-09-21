@@ -1,0 +1,56 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25%;
+    flex-direction: column;
+}
+
+header img{
+    height: 100px;
+    justify-content: center;
+}
+
+header h1 {
+    text-align: left;
+    color: GREEN;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 50%;
+}
+
+li {
+    cursor: pointer;
+}
+
+
+p {
+    text-align: right;
+    color: blue;
+    font-style: italic;
+    font-size: 18px;
+}
+
+footer {
+    height: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

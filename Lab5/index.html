@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            height: 200px;
+        }
+        button {
+            display: block;
+        }
+        section {
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 10px 40px;
+            border: 1px solid black;
+            border-radius: 20px;
+            padding: 10px
+        }
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .selector-icon {
+            height: 100px;
+            width: 100px;
+        }
+        .wide {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+    <script src="./script.js"></script>
+</head>
+<body>
+    <section>
+        <img src="./assets/pic1.jpg" alt="" onclick="pickPicture(0)">
+        <img src="./assets/pic2.jpg" alt="" onclick="pickPicture(1)">
+        <img src="./assets/pic3.jpg" alt="" onclick="pickPicture(2)">
+        <div class="wide">
+            <img src="" alt="">
+        </div>
+    </section>
+    <section class="task2">
+        <img src="./assets/pic1.jpg" alt="" onmouseover="changeScale(4, 400, 300)" onmouseout="changeScale(4, 'auto', 200)">
+        <img src="./assets/pic2.jpg" alt="" onmouseover="changeScale(5, 400, 300)" onmouseout="changeScale(5, 'auto', 200)">
+        <img src="./assets/pic3.jpg" alt="" onmouseover="changeScale(6, 400, 300)" onmouseout="changeScale(6, 'auto', 200)">
+    </section>
+    <section class="task3">
+        <div class="card">
+            <img src="./assets/unselected.jpg" alt="" class="selector-icon">
+            <img src="./assets/pic1.jpg" alt="" onmouseover="pictureReducer(7, 1)" onmouseout="pictureReducer(7, 0)">
+        </div>
+        <div class="card">
+            <img src="./assets/unselected.jpg" alt="" class="selector-icon">
+            <img src="./assets/pic2.jpg" alt="" onmouseover="pictureReducer(9, 1)" onmouseout="pictureReducer(9, 0)">
+        </div>
+        <div class="card">
+            <img src="./assets/unselected.jpg" alt="" class="selector-icon">
+            <img src="./assets/pic3.jpg" alt="" onmouseover="pictureReducer(11, 1)" onmouseout="pictureReducer(11, 0)">
+        </div>
+    </section>
+</body>
+</html>

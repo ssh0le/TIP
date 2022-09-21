@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            display: block;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .wrapper {
+            display: flex;
+            height: 30vh;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+
+        form {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        button {
+            padding: 10px;
+        }
+
+        #output {
+            height: 100%;
+            font-size: 1.4em;
+            overflow-y: scroll;
+            margin-left: 10px;
+            width: 22vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="" name="f">
+            <label for="min">Минимальное значение</label>
+            <input type="text" name="min">
+            <label for="">Максимальное значение</label>
+            <input type="text" name="max">
+            <label for="">Длина массива</label>
+            <input type="text" name="length">
+            <button type="button" onclick="map(doubleValue, createArray(document.f.min.value, document.f.max.value, document.f.length.value))">Создать</button>
+        </form>
+        <div id="output">Вывод</div>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>

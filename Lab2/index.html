@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: black;
+            height: 100vh;
+        }
+        button {
+            border: 1px solid #f93;
+            padding: 20px;
+            font-size: 2rem;
+        }
+    </style>
+    <script>
+        const getFIO = () => {
+            let fio = prompt("Ваше имя", '') + " ";
+            fio += prompt("Ваша фамилия", '') + " ";
+            fio += prompt("Ваше отчество", '');
+            let res = confirm(fio + '\nВсе верно?');
+            if (res) {
+                alert('Привет, ' + fio);
+            } else {
+                alert('Ошибка');
+            }
+        }
+    </script>
+    <script src="./script.js"></script>
+</head>
+<body>
+    <button onclick="getFIO()">Спросить имя фамилию отчество</button>
+    <button onclick="getGypo()">Вычислить гипотенузу по катетам</button>
+</body>
+</html>

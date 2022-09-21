@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .portion {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .name {
+            width: 180px;
+        }
+
+        .portion {
+            width: 110px;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+        }
+
+        .price {
+            width: 100px;
+        }
+
+        .price input {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        form,
+        .row {
+            border: 1px solid black;
+            width: 390px;
+            display: flex;
+            align-items: center;
+        }
+
+        .total {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .total .point {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        .delivery {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="row">
+            <div class="name header">Название</div>
+            <div class="portion header">Порция</div>
+            <div class="price header">Цена</div>
+        </div>
+        <form action="">
+            <div class="name">
+                <input type="checkbox" name="" id="n1" value='n1' onclick="mealClickHandler(0)">
+                <label for="n1">Паста карбонара</label>
+            </div>
+            <div class="portion">
+                <div class="point">
+                    <input type="radio" name="portion1" id="big1" onclick="portionClickHandler(0, event)">
+                    <label for="big1">Большая</label>
+                </div>
+                <div class="point">
+                    <input type="radio" name="portion1" id="medium1" onclick="portionClickHandler(0, event)">
+                    <label for="medium1">Средняя</label>
+                </div>
+                <div class="point">
+                    <input type="radio" name="portion1" id="small1" onclick="portionClickHandler(0, event)">
+                    <label for="small1">Маленькая</label>
+                </div>
+            </div>
+            <div class="price">
+                <input readonly type="text">
+            </div>
+        </form>
+        <form action="">
+            <div class="name">
+                <input type="checkbox" name="" id="n2" value='n2' onclick="mealClickHandler(1)">
+                <label for="n2">Лазанья</label>
+            </div>
+            <div class="portion">
+                <div class="point">
+                    <input type="radio" name="portion1" id="big1" onclick="portionClickHandler(1, event)">
+                    <label for="big1">Большая</label>
+                </div>
+                <div class="point">
+                    <input type="radio" name="portion1" id="medium1" onclick="portionClickHandler(1, event)">
+                    <label for="medium1">Средняя</label>
+                </div>
+                <div class="point">
+                    <input type="radio" name="portion1" id="small1" onclick="portionClickHandler(1, event)">
+                    <label for="small1">Маленькая</label>
+                </div>
+            </div>
+            <div class="price">
+                <input readonly type="text">
+            </div>
+        </form>
+        <form action="">
+            <div class="name">
+                <input type="checkbox" name="" id="n3" value='n3' onclick="mealClickHandler(2)">
+                <label for="n3">Пицца деревенская</label>
+            </div>
+            <div class="portion">
+                <div class="point">
+                    <input type="radio" name="portion2" id="big2" onclick="portionClickHandler(2, event)">
+                    <label for="big2">Большая</label>
+                </div>
+                <div class="point">
+                    <input type="radio" name="portion2" id="medium2" onclick="portionClickHandler(2, event)">
+                    <label for="medium2">Средняя</label>
+                </div>
+                <div class="point">
+                    <input type="radio" name="portion2" id="small2" onclick="portionClickHandler(2, event)">
+                    <label for="small2">Маленькая</label>
+                </div>
+            </div>
+            <div class="price">
+                <input readonly type="text">
+            </div>
+        </form>
+        <form action="">
+            <div class="name">
+                <input type="checkbox" name="" id="n4" value='n4' onclick="mealClickHandler(3)">
+                <label for="n4">Тортилья</label>
+            </div>
+            <div class="portion">
+                <div class="point">
+                    <input type="radio" name="portion4" id="big4" onclick="portionClickHandler(3, event)">
+                    <label for="big4">Большая</label>
+                </div>
+                <div class="point">
+                    <input type="radio" name="portion4" id="medium4" onclick="portionClickHandler(3, event)">
+                    <label for="medium4">Средняя</label>
+                </div>
+                <div class="point">
+                    <input type="radio" name="portion4" id="small4" onclick="portionClickHandler(3, event)">
+                    <label for="small4">Маленькая</label>
+                </div>
+            </div>
+            <div class="price">
+                <input readonly type="text">
+            </div>
+        </form>
+        <form action="">
+            <div class="name">
+                <input type="checkbox" name="" id="n5" value='n5' onclick="mealClickHandler(4)">
+                <label for="n5">Рамен</label>
+            </div>
+            <div class="portion">
+                <div class="point">
+                    <input type="radio" name="portion5" id="big5" onclick="portionClickHandler(4, event)">
+                    <label for="big5">Большая</label>
+                </div>
+                <div class="point">
+                    <input type="radio" name="portion5" id="medium5" onclick="portionClickHandler(4, event)">
+                    <label for="medium5">Средняя</label>
+                </div>
+                <div class="point">
+                    <input type="radio" name="portion5" id="small5" onclick="portionClickHandler(4, event)">
+                    <label for="small5">Маленькая</label>
+                </div>
+            </div>
+            <div class="price">
+                <input readonly type="text">
+            </div>
+        </form>
+        <form action="" class="delivery">
+            <div>
+                <input type="checkbox" name="" id="delivery" onclick="setSummary()">
+                <label for="delivery">Доставка</label>
+            </div>
+        </form>
+        <form action="" class="total" name="total">
+            <div class="point">
+                <label for="">Сумма заказа</label>
+                <input readonly type="text">
+            </div>
+            <div class="point">
+                <label for="">Бесплатный напиток</label>
+                <input readonly type="text">
+            </div>
+            <div class="point">
+                <label for="">Стоимость доставки</label>
+                <input readonly type="text">
+            </div>
+            <div class="point">
+                <label for="">Итоговая сумма</label>
+                <input readonly type="text">
+            </div>
+        </form>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
