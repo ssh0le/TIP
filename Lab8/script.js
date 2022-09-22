@@ -20,6 +20,8 @@ function setDate(id, date) {
     document.getElementById(id).value = (new Date(date)).toISOString().split('T')[0];
 }
 
+console.log((new Date()).toISOString());
+
 function clickHandler() {
     const date1 = new Date(getValue('from-date'));
     const date2 = new Date(getValue('to-date'));
@@ -60,7 +62,6 @@ function secondClickHandler() {
 
 
     let cnv = document.getElementById('chart');
-    console.log(cnv);
     if (!cnv) {
         cnv = document.createElement('div');
         cnv.id = 'chart';

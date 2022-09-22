@@ -7,12 +7,12 @@ function find(arr, value) {
     return -1;
 }
 
-const out = document.getElementById('output');
 
 console.log(find(['test', 'text', 'taxi'], 'test'));
 console.log(find([-1, 0, 1], 2));
 console.log(find([-1, 0, 1], 1));
 
+const out = document.getElementById('output');
 function createArray(min, max, length) {
     out.innerHTML = '';
     const arr = [];

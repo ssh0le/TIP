@@ -1,3 +1,5 @@
+let drinkNum;
+
 function mealClickHandler(n) {
     const form = document.forms[n];
     if (form.elements[0].checked) {
@@ -54,10 +56,15 @@ function changePrice(form) {
     }
 }
 
+function changeDrink(elem) {
+    drinkNum = elem.value;
+}
+
 function setSummary() {
     let totalSum = 0;
     let bigMealsCount = 0;
     let deliveryPrice = 0;
+    const drinks = ['Выберите напиток','Сок', "Газировка", "Кофе", "Смузи"];
     const forms = document.forms;
 
     for (let i = 0; i < 5; i++) {
@@ -77,9 +84,19 @@ function setSummary() {
     }
     totalFormElements[0].value = totalSum;
     if (bigMealsCount >= 2) {
-        totalFormElements[1].value = 'Добавлен к заказу';
+        totalFormElements[1].disabled = false;
+        totalFormElements[1].innerHTML = "";
+        for (let i = 0; i < drinks.length; i++) {
+            if (drinkNum === drinks[i]) {
+                totalFormElements[1].innerHTML += `<option selected value='${drinks[i]}'>${drinks[i]}</option>`
+            } else {
+                totalFormElements[1].innerHTML += `<option value='${drinks[i]}'>${drinks[i]}</option>`
+            }
+        }
     } else {
-        totalFormElements[1].value = 'Не доступен';
+        totalFormElements[1].innerHTML = `<option ='none'>Не доступен</option>`
+        totalFormElements[1].disabled = true;
+        drinkNum = 'none';
     }
 
     if (forms[5].elements[0].checked) {
