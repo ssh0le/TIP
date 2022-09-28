@@ -1,0 +1,68 @@
+#first {
+    width: 324px;
+    margin: auto;
+    font-size: 1.4em;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#first button {
+    width: 100%;
+    margin: 10px 0; 
+}
+
+.in label {
+    display: inline-block;
+    width: 202px;
+}
+
+.out label{
+    display: inline-block;
+    width: 280px;
+}
+
+.out input {
+    width: 30px;
+}
+
+.second {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1.3em;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.second form:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+fieldset, .controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
+
+.controls {
+    width: auto;
+}
+
+.surname, .date {
+    display: flex;
+    flex-direction: column;
+    margin: 10px
+}
+
+.employee label {
+    margin-bottom: 5px;
+}
+
+.second button {
+    font-size: 1.1em;
+}

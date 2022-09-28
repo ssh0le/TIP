@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    background-color: rgb(33, 47, 59);
+    font-size: 1.4rem;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 350px;
+    gap: 5px;
+}
+
+.list-item, .header {
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(43, 140, 178);
+    color: white;
+}
+
+.date-wrapper, .name-wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.number {
+    width: 10%;
+}
+
+.name {
+    width: 50%; 
+}
+
+.date {
+    width: 40%;
+}
