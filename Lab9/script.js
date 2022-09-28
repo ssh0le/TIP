@@ -19,6 +19,7 @@ function removeImgTransition(item) {
 
 function addImgTransition(item) {
     const img  = item.querySelector('.slider-item-image');
+    //https://stackoverflow.com/questions/24148403/trigger-css-transition-on-appended-element
     window.getComputedStyle(img).margin;
     img.classList.add('hor-move');
 }
