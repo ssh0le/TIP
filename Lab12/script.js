@@ -40,7 +40,7 @@ function animateBorder() {
 // Используйте цепные функции
 addParagraph();
 function addParagraph() {
-    const p = $('<p>Это конец body<p>');
+    const p = $('<p>Это конец body</p>');
     $('body').append(p);
     p.attr('id', 'newparagraph').css('background', 'black').css('color', 'white')
 }
