@@ -46,7 +46,7 @@ header {
 
 #slider {
     height: 400px;
-    width: 100%;
+    width: 50%;
     border: 1px solid black;
     display: flex;
     align-items: center;
